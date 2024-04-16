@@ -1,0 +1,7 @@
+currency_converter.settings:
+  path: '/admin/config/system/currency-converter/settings'
+  defaults:
+    _form: '\Drupal\currency_converter\Form\Settings'
+    _title: 'Currency Converter Settings'
+  requirements:
+    _permission: 'administer site configuration'

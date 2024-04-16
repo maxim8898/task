@@ -1,0 +1,4 @@
+currency_converter.settings:
+  title: 'Currency Converter Settings'
+  route_name: currency_converter.settings
+  parent: system.admin_config_system

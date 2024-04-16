@@ -1,0 +1,4 @@
+services:
+  currency_converter.converter:
+    class: Drupal\currency_converter\Service\Converter
+    arguments: ['@config.factory']

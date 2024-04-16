@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+function currency_converter_cron() {
+  \Drupal::service('currency_converter.converter')->syncCurrencies();
+}

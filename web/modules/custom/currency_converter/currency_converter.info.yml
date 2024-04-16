@@ -1,0 +1,6 @@
+name: Currency Converter
+type: module
+description: 'Currency Converter module.'
+package: Custom
+core_version_requirement: ^10
+configure: currency_converter.settings
