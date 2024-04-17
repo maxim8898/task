@@ -5,3 +5,10 @@ currency_converter.settings:
     _title: 'Currency Converter Settings'
   requirements:
     _permission: 'administer site configuration'
+currency_converter.view:
+  path: '/admin/config/system/currency-converter/view'
+  defaults:
+    _form: '\Drupal\currency_converter\Form\Currency'
+    _title: 'Currency'
+  requirements:
+    _permission: 'administer site configuration'

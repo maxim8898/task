@@ -18,7 +18,7 @@ class Converter {
     $this->configFactory = $config_factory;
   }
 
-  public function syncCurrencies():void {
+  public function syncCurrencies(): void {
     $config = $this->configFactory->getEditable('currency_converter.settings');
     $api_key = $config->get('api_key');
 
@@ -37,6 +37,19 @@ class Converter {
       $config->set('currencies', $data);
       $config->save();
     }
+  }
+
+  public function convert(float $value, string $from, string $to): float|NULL {
+    $config = $this->configFactory->get('currency_converter.settings');
+    $currencies = $config->get('currencies');
+
+    if (!isset($currencies[$from]) || !isset($currencies[$to])) {
+      return NULL;
+    }
+
+    $currency = $currencies[$from] / $currencies[$to];
+
+    return $value / $currency;
   }
 
 }
